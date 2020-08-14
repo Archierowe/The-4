@@ -1,38 +1,30 @@
-// Below is the basic call of the map - google maps API.
-// I need to work out what to do next - for example - I know I want to enable the user to pick a city or a country (from UK, France, Spain and Italy - hence the name 'The 4')
-// Only thing is where I go/what I do from here (code wise) is a mystery to me, at this point.
-
-let map;
-
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 51.5194, lng: 0.1270 },
-    zoom: 8
-  });
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 51.5194, lng: 0.1270 },
+                zoom: 7
+            });
+
+            var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+
+            var locations = [
+            { lat: 51.4978, lng: 0.1745 },
+            { lat: 51.4967, lng: 0.1764 },
+            { lat: 51.5081, lng: 0.0759 }
+            ];
+
+            var markers = locations.map(function(location, i) {
+                return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                });
+            });
+        
+
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+            
 }
-
-// for later perhaps
-
-// var cities = {
-//     'London': {
-//         center: { lat: 51.5194, lng: 0.1270 },
-//         zoom: 8
-//     },
-//     'Paris': {
-//         center: { lat: 48.8566, lng: 2.3522 },
-//     zoom: 8
-//     },
-//     'Madrid': {
-//         center: { lat: 40.4168, lng: 3.7038 },
-//     zoom: 8
-//     },
-//     'Rome': {
-//         center: { lat: 41.9028, lng: 12.4964 },
-//     zoom: 8
-//     }
-// };
-
-// found this on the google maps API site as I like the idea of markers dropping in so too the code - stuck it in here changed the long and lat.
+// found this on the google maps API site as I like the idea of markers dropping in - stuck it in here changed the long and lat.
 // var marker;
 
 // function initMap() {
