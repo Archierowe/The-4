@@ -17,74 +17,60 @@
 </head>
 <body>
     <header class="container-fluid navbar-section">
-        <nav class="navbar navbar-dark bg-dark nav">
-            <a id="nav-title" class="navbar-brand uppercase" href="#">
+        <nav class="navbar navbar-dark bg-secondary nav">
+            <a id="nav-title" class="navbar-brand" href="#">
                 The 4: Hotel and "things-to-do" finder</a>
         </nav>
     </header>
-<section class="section-full bg-image">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <h2 class="mt-3 title">Please select country</h2>
-            </div>
-            <a href="#" class="btn btn-primary">click
-            </a>    
+<section class="container-fluid main-image">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="section-title">Country</h3>
+        </div>
+        <div class="col-md-4">
+            <h3 class="section-title">City</h3>
+        </div>
+        <div>
+            <h3 class="section-title">What are you looking for?</h3>
         </div>
     </div>
-
-
-</section>
-
-
-<!-- <div class="col-xs-12 col-sm-8 col-md-8 ">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="section-heading uppercase">Map</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <select class="input-box" id="country">
+            <option value="all" selected>Select country</option>
+            <option value="fr">France</option>       
+            <option value="it">Italy</option>       
+            <option value="es">Spain</option>         
+            <option value="uk">United Kingdom</option>
+            </select>
+        </div>  
+        <div class="col-md-4">
+            <input id="autocomplete" class="input-box" placeholder="Enter a city" type="text" />
+        </div>  
+    </div>
+            <div class="row">
+                    <div class="col-md-4">
+                        <button id="reset-button" type="button" class="btn btn-secondary" onclick="reset()">Reset</button>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </div>
-</section>
-<section class="container-fluid map-section">
+
+             
+        <div class="col-md-12">
+            <h3 class="section-title text-center">Map</h3>
+        </div>
         <div class="row">
-            <div class="col-sm-4 col-md-4 filter-column">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="section-heading uppercase">Choose a country</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 find-header">
-                        Country:
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <select class="input-boxes" id="country">
-                                <option value="all" selected>All</option>
-                                <option value="fr">France</option>       
-                                <option value="it">Italy</option>       
-                                <option value="es">Spain</option>         
-                                <option value="uk">United Kingdom</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="findhotels" class="col-md-12 find-header">
-                        City:
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="locationField" class="col-md-12">
-                        <input id="autocomplete" class="input-boxes" placeholder="Enter a city" type="text" />
-                    </div>
-                </div>
-                <div class="row">
+            <div class="col-md-12">
+                <div id="map"></div>
+            </div>
+        </div>      
+</section>
+
+    
+
+
+
+
+                <!-- <div class="row">
                     <div id="findhotels" class="col-md-12 find-header">
                         Type:
                     </div>
@@ -102,11 +88,8 @@
                     <div class="col-md-12 text-center">
                         <button id="reset-button" type="button" class="btn btn-primary" onclick="reset()">Reset</button>
                     </div>
-                </div>
-            </div>
-            
-        </div>
-    </section> -->
+                </div> -->
+           
 
   
    

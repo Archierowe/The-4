@@ -9,3 +9,46 @@
     padding: 0;
   }
 
+.main-image {
+    background-image:
+    linear-gradient(to bottom, rgb(141, 128, 128), rgba(0, 0, 0, 0.6)),
+    url('../images/London-bg.png');
+    height: 100vh;
+    background-size: cover;
+}
+
+.navbar-section {
+    padding: 0px;
+}
+
+#nav-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.input-box {
+    width: 100%;
+    line-height: 50px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#reset-button {
+    margin-bottom: 20px;
+    margin-top: 90px;
+    border: 5px;
+    border-color: rgb(0, 0, 0)
+}
