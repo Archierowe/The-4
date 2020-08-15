@@ -17,7 +17,7 @@
 </head>
 <body>
     <header class="container-fluid navbar-section">
-        <nav class="navbar navbar-dark bg-secondary nav">
+        <nav class="navbar navbar-dark bg-dark nav">
             <a id="nav-title" class="navbar-brand" href="#">
                 The 4: Hotel and "things-to-do" finder</a>
         </nav>
@@ -36,21 +36,38 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <select class="input-box" id="country">
-            <option value="all" selected>Select country</option>
-            <option value="fr">France</option>       
-            <option value="it">Italy</option>       
-            <option value="es">Spain</option>         
-            <option value="uk">United Kingdom</option>
-            </select>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                </div>
+                    <select class="custom-select" id="country">
+                        <option selected>Select country</option>
+                        <option value="fr">France</option>       
+                        <option value="it">Italy</option>       
+                        <option value="es">Spain</option>         
+                        <option value="uk">United Kingdom</option>
+                    </select>
+            </div>
         </div>  
         <div class="col-md-4">
-            <input id="autocomplete" class="input-box" placeholder="Enter a city" type="text" />
+            <input id="autocomplete" class="input-box" placeholder="What city are you in?" type="text" />
         </div>  
+        <div class="col-md-4">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                </div>
+                    <select class="custom-select" id="types">
+                        <option selected>Select</option>
+                        <option value="hotels">Hotels</option>       
+                        <option value="to-do">Things to do</option>       
+                    </select>
+            </div>
+        </div> 
     </div>
             <div class="row">
-                    <div class="col-md-4">
-                        <button id="reset-button" type="button" class="btn btn-secondary" onclick="reset()">Reset</button>
+                    <div class="col-md-12 text-center">
+                        <button id="reset-button" type="button" class="btn btn-dark" onclick="reset()">Reset my options</button>
                     </div>
                 </div>
 

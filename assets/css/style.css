@@ -43,12 +43,11 @@
     line-height: 50px;
     font-size: 15px;
     margin-bottom: 20px;
-    border-radius: 5px;
 }
 
 #reset-button {
     margin-bottom: 20px;
-    margin-top: 90px;
+    margin-top: 0;
     border: 5px;
     border-color: rgb(0, 0, 0)
 }
