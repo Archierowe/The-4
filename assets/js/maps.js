@@ -1,3 +1,8 @@
+var map;
+var position;
+var marker;
+var autocomplete;
+
 var countries = {
 
     'fr': {
@@ -18,36 +23,35 @@ var countries = {
     }
 };
 
-
 function initMap() {
-//    I want to link this to the country selector - so when a user selects a country it snaps to that location on the map
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: countries ['uk'].center,
-        zoom: 3
-    });
-
-
-
-
-
-
-        //     var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
-
-        //     var locations = [
-        //     { lat: 51.4978, lng: 0.1745 },
-        //     { lat: 51.4967, lng: 0.1764 },
-        //     { lat: 51.5081, lng: 0.0759 }
-        //     ];
-
-        //     var markers = locations.map(function(location, i) {
-        //         return new google.maps.Marker({
-        //             position: location,
-        //             label: labels[i % labels.length]
-        //         });
-        //     });
-        
-
-        // var markerCluster = new MarkerClusterer(map, markers,
-        //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-            
+  position = countries['uk'].center
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: position,
+    zoom: 5
+  });
+  marker = new google.maps.Marker({position: position, map: map});
 }
+
+  $("#countries").on("change", function(event){
+  var country = $(this).val();
+  var coordinates = countries[country].center;
+  
+  // Panning map to new coordinates
+  map.panTo(coordinates);
+  
+  // Updates global `position` variable to new coordinates
+  position = coordinates;
+  
+  // Removes existing marker from the map
+  marker.setMap(null)
+  
+  // Creates new marker at new coordinates
+  marker = new google.maps.Marker({position: position, map: map});
+
+}); 
+
+function reset() {
+     $('#countries');
+     map.setCenter(countries['uk'].center);
+}
+

@@ -36,14 +36,14 @@
         <div class="col-md-4">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    <label class="input-group-text" for="countries">Options</label>
                 </div>
-                    <select class="custom-select" id="country">
-                        <option selected>Select country</option>
+                    <select class="custom-select" name="countries" id="countries">
+                        <option selected>Select a country from the list</option>
                         <option value="fr">France</option>       
                         <option value="it">Italy</option>       
                         <option value="es">Spain</option>         
-                        <option value="uk">United Kingdom</option>
+                        <option value="uk">UK</option>
                     </select>
             </div>
         </div>  
@@ -68,8 +68,6 @@
                         <button id="reset-button" type="button" class="btn btn-dark" onclick="reset()">Reset my options</button>
                     </div>
                 </div>
-
-             
         <div class="col-md-12">
             <h3 class="section-title text-center">Map</h3>
         </div>
@@ -80,12 +78,12 @@
         </div>      
 </section> 
   
-<!-- JS, Popper.js, and jQuery -->
 
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE7Uk0PU7UKQMcx9pnYgm6pjpGTMqAj18&callback=initMap"></script>
-<script type="text/javascript" src="assets/js/maps.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE7Uk0PU7UKQMcx9pnYgm6pjpGTMqAj18&callback=initMap"></script>
+<script src="assets/js/maps.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
