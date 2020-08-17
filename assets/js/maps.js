@@ -1,7 +1,6 @@
-var map;
+var map, places, infoWindow
 var position;
 var marker;
-var autocomplete;
 
 var countries = {
 
@@ -24,12 +23,11 @@ var countries = {
 };
 
 function initMap() {
-  position = countries['uk'].center
-  map = new google.maps.Map(document.getElementById("map"), {
+    position = countries['uk'].center
+    map = new google.maps.Map(document.getElementById("map"), {
     center: position,
-    zoom: 5
+    zoom: 5,
   });
-  marker = new google.maps.Marker({position: position, map: map});
 }
 
   $("#countries").on("change", function(event){
@@ -42,16 +40,11 @@ function initMap() {
   // Updates global `position` variable to new coordinates
   position = coordinates;
   
-  // Removes existing marker from the map
-  marker.setMap(null)
-  
-  // Creates new marker at new coordinates
-  marker = new google.maps.Marker({position: position, map: map});
-
 }); 
 
 function reset() {
-     $('#countries');
-     map.setCenter(countries['uk'].center);
+    $('#countries');
+    map.setCenter(countries['uk'].center);
 }
+
 
